@@ -1,5 +1,4 @@
 function getComputerChoice() {
-  // return a random number between 1 and 3. integer number - use math.random.math.floor
   const choices = ['rock', 'paper', 'scissors'];
   return choices[Math.floor(Math.random() * choices.length)];
 }
@@ -15,9 +14,6 @@ function playGame() {
   let computerScore = 0;
 
   function playRound(humanChoice, computerChoice) {
-    // play 1st round with computer and human choice
-    // if computer wins, incremet computerScore
-    // if human winds, increment humanScore
     console.log(`Human choice: ${humanChoice}`);
     console.log(`Computer choice: ${computerChoice}`);
     if (computerChoice === 'rock') {
@@ -55,7 +51,7 @@ function playGame() {
   }
 
   let numRounds = 0;
-  while (numRounds < 6) {
+  while (numRounds <= 4) {
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
@@ -70,13 +66,3 @@ function playGame() {
 }
 
 playGame();
-
-// function playRound(computerChoice, humanChoice) {
-//   if (computerChoice === '1' && humanChoice === 'scissors') {
-//     console.log(`You lose! ${computerChoice} beats ${humanChoice}!`);
-//   } else if (computerChoice === 2 && humanChoice === 'rock') {
-//     console.log(`You lose! ${computerChoice} beats ${humanChoice}!`);
-//   } else if (computerChoice === 3 && humanChoice === 'paper') {
-//     console.log(`You lose! ${computerChoice} beats ${humanChoice}!`);
-//   }
-//
